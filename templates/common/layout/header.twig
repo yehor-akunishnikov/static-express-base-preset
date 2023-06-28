@@ -1,0 +1,23 @@
+{% set links = [
+    {url: '', title: 'Home'},
+    {url: 'test', title: 'Test'},
+    {url: 'users', title: 'Users'},
+] %}
+
+<header class="header card p-2">
+    <nav class="header-nav">
+        <ul class="header-nav-links d-flex m-0">
+            {% for link in links %}
+                {% if title == link.title %}
+                    <li class="mx-2">
+                        <a class="link-primary link-underline-light" href="/{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                {% else %}
+                    <li class="mx-2">
+                        <a class="link-secondary link-underline-light" href="/{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

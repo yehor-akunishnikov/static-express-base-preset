@@ -1,0 +1,33 @@
+.users-list, .header-nav-links {
+  padding: 0;
+  list-style: none;
+}
+
+.user {
+  @media screen and (min-width: 480px) {
+    width: 46%;
+  }
+
+  @media screen and (min-width: 800px) {
+    width: 31%;
+  }
+
+  width: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+.main {
+  overflow:auto;
+  padding-bottom:120px;
+}
+
+.footer {
+  position: relative;
+  margin-top: -120px;
+  height: 120px;
+  clear:both;
+  padding-top:20px;
+}

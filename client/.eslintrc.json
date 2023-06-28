@@ -1,0 +1,35 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jasmine": true
+    },
+    "plugins": ["jasmine"],
+    "extends": [
+        "standard-with-typescript",
+        "standard",
+        "plugin:jasmine/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": ["tsconfig.json"],
+        "jsoncompilerOptions": {
+            "strictNullChecks": false
+        }
+    },
+    "rules": {
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/prefer-nullish-coalescing": "off",
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/semi": [2, "always"],
+        "semi": [2, "always"],
+        "@typescript-eslint/member-delimiter-style": "off",
+        "@typescript-eslint/return-await": "off",
+        "@typescript-eslint/promise-function-async": "off",
+        "@typescript-eslint/no-confusing-void-expression": "off",
+        "@typescript-eslint/consistent-type-imports": "off",
+        "@typescript-eslint/consistent-type-assertions": "off",
+        "jasmine/prefer-toHaveBeenCalledWith": "off"
+    }
+}

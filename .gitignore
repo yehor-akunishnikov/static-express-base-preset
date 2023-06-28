@@ -1,0 +1,6 @@
+node_modules
+static
+vendor
+.env
+.idea
+coverage

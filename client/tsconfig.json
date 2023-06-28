@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "lib": [
+      "es2019",
+      "dom",
+      "dom.iterable"
+    ],
+    "esModuleInterop": true,
+    "types": [
+      "@types/jasmine",
+    ],
+    "sourceMap": true,
+    "target": "ESNext",
+    "module": "CommonJS",
+    "strict": false,
+  }
+}

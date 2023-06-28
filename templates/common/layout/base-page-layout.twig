@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+    {% include 'common/layout/head.twig' %}
+    <body>
+        <div class="min-vh-100">
+            {% include 'common/layout/header.twig' %}
+            <main class="main">
+                {% block main %}{% endblock %}
+            </main>
+        </div>
+        {% include 'common/layout/footer.twig' %}
+    </body>
+</html>

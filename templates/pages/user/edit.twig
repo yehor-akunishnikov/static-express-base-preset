@@ -1,0 +1,41 @@
+{% extends "common/layout/base-page-layout.twig" %}
+
+{% set title = 'User' %}
+
+{% set formArray = [
+    {key: 'name', label: 'Name', type: 'text'},
+    {key: 'favoriteColor', label: 'Favorite color', type: 'text'},
+    {key: 'age', label: 'Age', type: 'number'},
+    {key: 'cash', label: 'Cash', type: 'number'}
+] %}
+
+{% block main %}
+<div id="update-user-progress" class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 0%"></div>
+</div>
+
+<div class="container mt-4">
+    <form class="mb-4 p-4 card" id="update-user-form">
+        {% for input in formArray %}
+            <div class="mb-4">
+                <label class="form-label" for="{{ input.key }}">{{ input.label }}:</label>
+                <div class="input-group">
+                    <input class="form-control" value="{{ attribute(user, input.key) }}" id="{{ input.key }}" name="{{ input.key }}" type="{{ input.type }}">
+                </div>
+            </div>
+        {% endfor %}
+        <button class="w-100 btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    <ul id="users-list" class="users-list card p-3 mb-3">
+        <li id="user-{{ user.id }}" class="m-2">
+            <span class="link-underline-light" href="users/edit/{{ user.id }}">
+                <span class="card mb-2 p-2 text-center">{{ user.name }}</span>
+                <span class="card mb-2 p-2 text-center">{{ user.favoriteColor }}</span>
+                <span class="card mb-2 p-2 text-center">{{ user.age }}</span>
+                <span class="card p-2 text-center">{{ user.cash }}</span>
+            </span>
+        </li>
+    </ul>
+</div>
+{% endblock %}
